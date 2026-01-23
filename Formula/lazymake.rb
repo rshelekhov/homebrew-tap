@@ -5,21 +5,21 @@
 class Lazymake < Formula
   desc "A beautiful TUI for running Makefile targets"
   homepage "https://github.com/rshelekhov/lazymake"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.2.0/lazymake_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "3d021e9ef0de2c12be4f2e96d39fc34d1c520b5d39599b4521398d6f36cf41c6"
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.3.0/lazymake_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "0f87f7fcaacdd113f2099befe96007fed0559a59e84feed90754d8cdbe4546b9"
 
       def install
         bin.install "lazymake"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.2.0/lazymake_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "cb15f7c2555102beaae6277ed91e12c55203e002a9148845eca25835e00a3869"
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.3.0/lazymake_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "dd54a07bd242862340108a1148c0890dab9ee634ad7acecdcf5ca95ff5ca3fef"
 
       def install
         bin.install "lazymake"
@@ -29,15 +29,15 @@ class Lazymake < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.2.0/lazymake_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "09ef7cc9668c2a53e7caf0b581085f929c7380577b6b0febe1d4eb8f7735d72c"
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.3.0/lazymake_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "73c737bab372ce2dd93a3bcc0e69bef177033e473c2145d887b187c437f23264"
       def install
         bin.install "lazymake"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.2.0/lazymake_0.2.0_Linux_arm64.tar.gz"
-      sha256 "89440263b8591c1392a3ab117836069490590a960bda08f07b35dddde5420e1f"
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.3.0/lazymake_0.3.0_Linux_arm64.tar.gz"
+      sha256 "0a65bf7ebc388a02c7e0ee76d8356e7bae81e46a2a6177f5a1ec23b59031466c"
       def install
         bin.install "lazymake"
       end
