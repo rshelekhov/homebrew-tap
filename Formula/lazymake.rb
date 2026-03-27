@@ -5,23 +5,23 @@
 class Lazymake < Formula
   desc "A beautiful TUI for running Makefile targets"
   homepage "https://github.com/rshelekhov/lazymake"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.0/lazymake_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "f524a293173b9239b1159e15bad45ed43736f0732babfe0bf6c4a01d7e0f1a81"
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.1/lazymake_0.4.1_Darwin_x86_64.tar.gz"
+      sha256 "9a674a9110895087df380d52fe4cacd71cddfd39b6120fc380c072c3810000a2"
 
-      def install
+      define_method(:install) do
         bin.install "lazymake"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.0/lazymake_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "0ff0842240a0f17584cd07d7652b804d544a5e313b8403130470fd9156fd2082"
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.1/lazymake_0.4.1_Darwin_arm64.tar.gz"
+      sha256 "5fc75b40c75d9d93523c0d2853636fcaddf360ec7815aeb3b581604e403980ef"
 
-      def install
+      define_method(:install) do
         bin.install "lazymake"
       end
     end
@@ -29,16 +29,16 @@ class Lazymake < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.0/lazymake_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "e8cc7ab04ba65a26bebada1f0b8e98528980b8e392aaa2ed3d17df0eeb71d852"
-      def install
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.1/lazymake_0.4.1_Linux_x86_64.tar.gz"
+      sha256 "2fd935afbccb3eba6604883c1ed1744f8f219d64a4874d5c8c9ea77489c2936d"
+      define_method(:install) do
         bin.install "lazymake"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.0/lazymake_0.4.0_Linux_arm64.tar.gz"
-      sha256 "8acb71c3021a737fda61c2868e1c63975e10bb6f714f056fa7ff73c42d201619"
-      def install
+      url "https://github.com/rshelekhov/lazymake/releases/download/v0.4.1/lazymake_0.4.1_Linux_arm64.tar.gz"
+      sha256 "44e4e27575a3866ca3625627bb8589c1352b0de1cc63f03519d46269d040a74f"
+      define_method(:install) do
         bin.install "lazymake"
       end
     end
