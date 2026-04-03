@@ -1,0 +1,27 @@
+name: Release Formulae (Livecheck)
+
+on:
+  release:
+    types: [ released ]
+
+  workflow_dispatch:
+    inputs:
+      formula:
+        description: 'Formula to release (leave empty to check all)'
+        required: false
+        default: ''
+  schedule:
+    - cron: '0 5 1 * *' # change to the desired schedule
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update formulae using Livecheck
+        uses: dawidd6/action-homebrew-bump-formula@v7
+        with:
+          token: ${{ secrets.COMMITTER_TOKEN }} # create a classic personal access token with repo and workflow cope, add it to the repository secrets as COMMITTER_TOKEN
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          tap: fraluc06/homebrew-tap
+          formula: ${{ inputs.formula }}
+          livecheck: true
