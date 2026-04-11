@@ -19,7 +19,7 @@ jobs:
       - name: Update formulae using Livecheck
         uses: dawidd6/action-homebrew-bump-formula@v7
         with:
-          token: ${{ secrets.COMMITTER_TOKEN }} # create a classic personal access token with repo and workflow cope, add it to the repository secrets as COMMITTER_TOKEN
+          token: ${{ secrets.COMMITTER_TOKEN }} # create a classic personal access token with repo and workflow scope, add it to the repository secrets as COMMITTER_TOKEN
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
           tap: rshelekhov/homebrew-tap
