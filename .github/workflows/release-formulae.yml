@@ -22,6 +22,6 @@ jobs:
           token: ${{ secrets.COMMITTER_TOKEN }} # create a classic personal access token with repo and workflow cope, add it to the repository secrets as COMMITTER_TOKEN
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          tap: fraluc06/homebrew-tap
+          tap: rshelekhov/homebrew-tap
           formula: ${{ inputs.formula }}
           livecheck: true
